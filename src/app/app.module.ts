@@ -28,14 +28,19 @@ import { MatDialogModule} from '@angular/material/dialog';//dialog
 import { MatRadioModule} from '@angular/material/radio';//radio
 import { MatTabsModule} from '@angular/material/tabs';//tabs
 import { MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 //router
 import { RouterModule } from '@angular/router';
 import { FormComponent } from './form/form.component';
+import { TableComponent } from './table/table.component';
+import { SurveyComponent } from './survey/survey.component';
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     FormComponent,
+    TableComponent,
+    SurveyComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,8 +67,11 @@ import { FormComponent } from './form/form.component';
     MatRadioModule,
     MatTabsModule,
     MatSelectModule,
+    MatDatepickerModule,
     RouterModule.forRoot([
-      {path:"form",component:FormComponent}
+      {path:"form",component:FormComponent},
+      {path:"table",component:TableComponent},
+      {path:"survey",component:SurveyComponent}
     ]),
   ],
   providers: [],

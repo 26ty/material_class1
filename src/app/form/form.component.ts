@@ -21,4 +21,9 @@ export class FormComponent implements OnInit {
     console.log(this.gradeForm)
   }
 
+  addTable(){
+    location.href = "/table"
+  }
+
+
 }
